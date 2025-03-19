@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@zegocloud/zego-uikit-prebuilt": "^2.14.1-beta",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

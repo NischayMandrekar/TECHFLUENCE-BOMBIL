@@ -28,7 +28,12 @@ export default function Home() {
             </h1>
             <p className="mx-auto mt-6 max-w-fit sm:text-xl/relaxed text-center">
               Welcome to SignSync – the AI-powered real-time sign language
-              interpreter for virtual meetings. Our platform seamlessly converts sign language gestures into instant captions and speech, ensuring clear and inclusive communication for both deaf and hearing participants. Powered by advanced AI, real-time hand tracking,SignSync makes every virtual meeting accessible and effortless."
+              interpreter for virtual meetings. Our platform seamlessly converts
+              sign language gestures into instant captions and speech, ensuring
+              clear and inclusive communication for both deaf and hearing
+              participants. Powered by advanced AI, real-time hand
+              tracking,SignSync makes every virtual meeting accessible and
+              effortless."
             </p>
             <div className="flex items-center justify-center gap-4 mt-6">
               <input
@@ -62,7 +67,14 @@ export default function Home() {
                 <div className="mt-4 flex items-center justify-center">
                   <button
                     className="text-lg font-medium hover:text-blue-400 hover:underline"
-                    onClick={() => router.push(`/room/${uuid()}`)}
+                    onClick={() => {
+                      const newRoomID = uuid();
+                      if (newRoomID) {
+                        router.push(`/room/${newRoomID}`);
+                      } else {
+                        console.error("Failed to generate a unique room ID.");
+                      }
+                    }}
                   >
                     Or create a new meeting
                   </button>
