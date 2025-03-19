@@ -1,0 +1,8 @@
+torch
+torchvision
+transformers
+opencv-python
+fastapi
+uvicorn
+onnxruntime
+numpy
