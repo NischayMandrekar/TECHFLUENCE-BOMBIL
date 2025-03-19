@@ -6,3 +6,8 @@ fastapi
 uvicorn
 onnxruntime
 numpy
+tqdm
+pandas
+scipy
+matplotlib
+kagglehub
