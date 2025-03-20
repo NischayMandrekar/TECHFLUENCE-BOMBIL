@@ -10,22 +10,55 @@ import joblib  # For saving the label encoder
 
 # Initialize MediaPipe Hands
 mp_hands = mp.solutions.hands
-hands = mp_hands.Hands(static_image_mode=True, max_num_hands=1, min_detection_confidence=0.5)
+mp_drawing = mp.solutions.drawing_utils
+hands = mp_hands.Hands(
+    static_image_mode=True,
+    max_num_hands=1,
+    min_detection_confidence=0.3,  # Lowered confidence threshold for better detection
+    min_tracking_confidence=0.7    # Increased tracking confidence
+)
+
+# Function to preprocess the image
+def preprocess_image(image):
+    # Resize the image
+    image = cv2.resize(image, (320, 320))
+    # Convert to grayscale
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    # Apply adaptive histogram equalization
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    gray = clahe.apply(gray)
+    # Apply Gaussian blur
+    gray = cv2.GaussianBlur(gray, (5, 5), 0)
+    # Convert back to BGR for MediaPipe compatibility
+    image = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
+    return image
 
 # Function to extract hand landmarks from an image
 def extract_landmarks(image):
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     results = hands.process(image_rgb)
-    landmarks = []
     if results.multi_hand_landmarks:
+        landmarks = []
         for hand_landmarks in results.multi_hand_landmarks:
             landmarks.extend([(lm.x, lm.y, lm.z) for lm in hand_landmarks.landmark])
-    return np.array(landmarks).flatten()
+        return np.array(landmarks).flatten()
+    return None  # No landmarks found
+
+# Function to visualize landmarks on an image
+def visualize_landmarks(image):
+    image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    results = hands.process(image_rgb)
+    if results.multi_hand_landmarks:
+        for hand_landmarks in results.multi_hand_landmarks:
+            mp_drawing.draw_landmarks(image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+    return image
 
 # Function to load the dataset
 def load_dataset(data_dir):
     X = []
     y = []
+    skipped_images = []  # To log skipped images
+
     for label in os.listdir(data_dir):
         label_dir = os.path.join(data_dir, label)
         if os.path.isdir(label_dir):  # Ensure it's a directory
@@ -34,14 +67,26 @@ def load_dataset(data_dir):
                 file_path = os.path.join(label_dir, file)
                 image = cv2.imread(file_path)
                 if image is not None:
+                    image = preprocess_image(image)  # Preprocess the image
                     landmarks = extract_landmarks(image)
-                    if landmarks.size > 0:  # Only add if landmarks are detected
+                    if landmarks is not None:  # Only add if landmarks are detected
                         X.append(landmarks)
                         y.append(label)
                     else:
                         print(f"No landmarks detected in: {file_path}")
+                        skipped_images.append(file_path)  # Log skipped images
+                        # Uncomment below to visualize the image for debugging
+                        # debug_image = visualize_landmarks(image)
+                        # cv2.imshow('Debug Image', debug_image)
+                        # cv2.waitKey(0)  # Press any key to continue
                 else:
                     print(f"Failed to load image: {file_path}")
+    
+    # Save the list of skipped images for inspection
+    with open(os.path.join('data', 'skipped_images.txt'), 'w') as f:
+        for img_path in skipped_images:
+            f.write(f"{img_path}\n")
+    
     return np.array(X), np.array(y)
 
 # Load the dataset
