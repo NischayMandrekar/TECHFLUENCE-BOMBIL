@@ -11,11 +11,13 @@
   "dependencies": {
     "@clerk/nextjs": "^6.12.6",
     "@clerk/themes": "^2.2.22",
+    "@next/swc-win32-x64-msvc": "^15.2.3",
     "@zegocloud/zego-uikit-prebuilt": "^2.14.1-beta",
     "framer-motion": "^12.5.0",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "socket.io-client": "^4.8.1",
     "uuid": "^11.1.0",
     "zustand": "^5.0.3"
   },

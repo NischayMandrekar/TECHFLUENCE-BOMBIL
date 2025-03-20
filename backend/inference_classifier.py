@@ -2,12 +2,13 @@ import pickle
 import cv2
 import mediapipe as mp
 import numpy as np
-import asyncio
-import websockets
 
 # Load the pre-trained model
 model_dict = pickle.load(open('./model.p', 'rb'))
 model = model_dict['model']
+
+# Start the video capture
+cap = cv2.VideoCapture(0)
 
 # Initialize MediaPipe Hands module
 mp_hands = mp.solutions.hands
@@ -18,113 +19,78 @@ mp_drawing_styles = mp.solutions.drawing_styles
 hands = mp_hands.Hands(static_image_mode=False, min_detection_confidence=0.3, min_tracking_confidence=0.3)
 
 # Define labels for predictions
-labels_dict = {0: 'yes', 1: 'no', 2: 'stop'}
+labels_dict = {0: 'yes', 1: 'noo', 2: 'stop'}
 
-# WebSocket URL
-WEBSOCKET_URL = "ws://localhost:5000/ws"
+while True:
+    data_aux = []
+    x_ = []
+    y_ = []
 
-# Global flag to control webcam processing
-processing = False
+    ret, frame = cap.read()
+    if not ret:
+        break
 
-async def send_caption(caption: str, user_id: str):
-    async with websockets.connect(WEBSOCKET_URL + f"/{user_id}") as websocket:
-        await websocket.send(caption)
+    H, W, _ = frame.shape
 
-async def process_video(user_id: str):
-    global processing
+    # Convert frame to RGB
+    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    # Start the video capture
-    cap = cv2.VideoCapture(0)
+    # Process the image to detect hand landmarks
+    results = hands.process(frame_rgb)
 
-    while processing:
-        data_aux = []
-        x_ = []
-        y_ = []
+    if results.multi_hand_landmarks:
+        for hand_landmarks in results.multi_hand_landmarks:
+            mp_drawing.draw_landmarks(
+                frame,  # image to draw
+                hand_landmarks,  # model output
+                mp_hands.HAND_CONNECTIONS,  # hand connections
+                mp_drawing_styles.get_default_hand_landmarks_style(),
+                mp_drawing_styles.get_default_hand_connections_style())
 
-        ret, frame = cap.read()
-        if not ret:
-            break
+        # Extract hand landmarks and normalize them
+        for hand_landmarks in results.multi_hand_landmarks:
+            for i in range(len(hand_landmarks.landmark)):
+                x = hand_landmarks.landmark[i].x
+                y = hand_landmarks.landmark[i].y
 
-        H, W, _ = frame.shape
+                x_.append(x)
+                y_.append(y)
 
-        # Convert frame to RGB
-        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            # Normalize landmarks to fit into the input format expected by the model
+            for i in range(len(hand_landmarks.landmark)):
+                x = hand_landmarks.landmark[i].x
+                y = hand_landmarks.landmark[i].y
+                data_aux.append(x - min(x_))
+                data_aux.append(y - min(y_))
 
-        # Process the image to detect hand landmarks
-        results = hands.process(frame_rgb)
+        # Ensure the model receives the correct number of features (84)
+        if len(data_aux) != 84:
+            print(f"Expected 84 features, but got {len(data_aux)}. Adjusting.")
+            continue  # Skip this iteration if the data is invalid
 
-        if results.multi_hand_landmarks:
-            for hand_landmarks in results.multi_hand_landmarks:
-                mp_drawing.draw_landmarks(
-                    frame,  # image to draw
-                    hand_landmarks,  # model output
-                    mp_hands.HAND_CONNECTIONS,  # hand connections
-                    mp_drawing_styles.get_default_hand_landmarks_style(),
-                    mp_drawing_styles.get_default_hand_connections_style())
+        # Predict the sign language character
+        prediction = model.predict([np.asarray(data_aux)])
 
-            # Extract hand landmarks and normalize them
-            for hand_landmarks in results.multi_hand_landmarks:
-                for i in range(len(hand_landmarks.landmark)):
-                    x = hand_landmarks.landmark[i].x
-                    y = hand_landmarks.landmark[i].y
+        # Get the predicted character from the model
+        predicted_character = labels_dict[int(prediction[0])]
 
-                    x_.append(x)
-                    y_.append(y)
+        # Draw the bounding box and display the predicted character
+        x1 = int(min(x_) * W) - 10
+        y1 = int(min(y_) * H) - 10
+        x2 = int(max(x_) * W) - 10
+        y2 = int(max(y_) * H) - 10
 
-                # Normalize landmarks to fit into the input format expected by the model
-                for i in range(len(hand_landmarks.landmark)):
-                    x = hand_landmarks.landmark[i].x
-                    y = hand_landmarks.landmark[i].y
-                    data_aux.append(x - min(x_))
-                    data_aux.append(y - min(y_))
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 4)
+        cv2.putText(frame, predicted_character, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 0, 0), 3,
+                    cv2.LINE_AA)
 
-            # Ensure the model receives the correct number of features (84)
-            if len(data_aux) != 84:
-                print(f"Expected 84 features, but got {len(data_aux)}. Adjusting.")
-                continue  # Skip this iteration if the data is invalid
+    # Show the processed frame
+    cv2.imshow('frame', frame)
 
-            # Predict the sign language character
-            prediction = model.predict([np.asarray(data_aux)])
+    # Break the loop on 'q' key press
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-            # Get the predicted character from the model
-            predicted_character = labels_dict[int(prediction[0])]
-
-            # Send the predicted character to the frontend via WebSocket
-            await send_caption(predicted_character, user_id)
-
-            # Draw the bounding box and display the predicted character
-            x1 = int(min(x_) * W) - 10
-            y1 = int(min(y_) * H) - 10
-            x2 = int(max(x_) * W) - 10
-            y2 = int(max(y_) * H) - 10
-
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 4)
-            cv2.putText(frame, predicted_character, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 0, 0), 3,
-                        cv2.LINE_AA)
-
-        # Show the processed frame
-        cv2.imshow('frame', frame)
-
-        # Break the loop on 'q' key press
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-    # Release the video capture object and close the window
-    cap.release()
-    cv2.destroyAllWindows()
-
-# Function to start webcam processing
-def start_processing(user_id: str):
-    global processing
-    processing = True
-    asyncio.get_event_loop().run_until_complete(process_video(user_id))
-
-# Function to stop webcam processing
-def stop_processing():
-    global processing
-    processing = False
-
-# Example usage
-if __name__ == "__main__":
-    user_id = "user1"  # Replace with the actual user ID
-    start_processing(user_id)
+# Release the video capture object and close the window
+cap.release()
+cv2.destroyAllWindows()

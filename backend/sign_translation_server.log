@@ -1,0 +1,209 @@
+2025-03-20 21:45:08,083 - sign-language-server - INFO - Model loaded successfully from ./model.p
+2025-03-20 21:45:08,122 - sign-language-server - INFO - Starting Sign Language Translation Server on http://0.0.0.0:5000
+2025-03-20 21:46:48,560 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb connected
+2025-03-20 21:46:48,571 - sign-language-server - INFO - Received text from user user_2uaGygGzODCo69PE7X6UUobzMZb: meeting_started
+2025-03-20 21:46:48,571 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb joined a meeting
+2025-03-20 21:49:20,258 - sign-language-server - INFO - Received text from user user_2uaGygGzODCo69PE7X6UUobzMZb: meeting_ended
+2025-03-20 21:49:20,259 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb left a meeting
+2025-03-20 21:49:20,262 - sign-language-server - ERROR - WebSocket error for user user_2uaGygGzODCo69PE7X6UUobzMZb: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:49:20,263 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb disconnected and cleaned up
+2025-03-20 21:53:34,180 - sign-language-server - INFO - Model loaded successfully from ./model.p
+2025-03-20 21:53:34,190 - sign-language-server - INFO - Starting Sign Language Translation Server on http://0.0.0.0:5000
+2025-03-20 21:53:50,123 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:53:50,127 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:53:50,128 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:53:50,128 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:53:52,224 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:53:52,227 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:53:52,227 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:53:52,228 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:53:54,939 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:53:54,941 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:53:54,943 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:53:54,943 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:53:57,062 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:53:57,064 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:53:57,065 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:53:57,066 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:53:59,213 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:53:59,214 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:53:59,215 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:53:59,216 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:01,362 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:01,364 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:01,365 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:01,365 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:03,481 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:03,483 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:03,484 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:03,484 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:05,928 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:05,930 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:05,931 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:05,931 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:09,401 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:09,403 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:09,405 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:09,405 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:11,552 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:11,553 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:11,554 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:11,555 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:13,736 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:13,738 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:13,738 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:13,739 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:15,902 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:15,904 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:15,905 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:15,906 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:18,008 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:18,009 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:18,010 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:18,010 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:20,170 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:20,171 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:20,172 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:20,172 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:22,320 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:22,322 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:22,323 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:22,324 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:24,457 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:24,458 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:24,460 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:24,460 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:26,584 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:26,586 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:26,586 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:26,587 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:29,163 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:29,165 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:29,166 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:29,166 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:31,698 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:31,700 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:31,701 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:31,702 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:54:33,834 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:54:33,836 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:54:33,837 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:54:33,837 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:55:53,970 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:55:53,972 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:55:53,972 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:55:53,973 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:05,445 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:05,446 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:05,447 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:05,447 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:20,673 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:20,674 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:20,675 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:20,675 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:25,041 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:25,043 - sign-language-server - INFO - Received text from user user1: stop
+2025-03-20 21:56:25,044 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:25,045 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:27,115 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:27,117 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:27,118 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:27,118 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:32,254 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:32,255 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:32,256 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:32,256 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:46,613 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:46,615 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:46,616 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:46,616 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:48,688 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:48,690 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:48,691 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:48,692 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:50,764 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:50,765 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:50,767 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:50,767 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:56:52,825 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:56:52,826 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:56:52,827 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:56:52,828 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:03,939 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:03,940 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:57:03,942 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:03,943 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:06,015 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:06,016 - sign-language-server - INFO - Received text from user user1: stop
+2025-03-20 21:57:06,017 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:06,018 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:17,777 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:17,779 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:57:17,779 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:17,780 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:28,031 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:28,033 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:57:28,034 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:28,035 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:41,462 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:41,464 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:57:41,465 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:41,465 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:44,395 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:44,398 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:57:44,398 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:44,399 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:46,509 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:46,511 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:57:46,511 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:46,512 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:48,593 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:48,596 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:57:48,598 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:48,598 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:50,671 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:50,673 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:57:50,674 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:50,675 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:52,739 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:52,740 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:57:52,741 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:52,741 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:54,985 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:54,987 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:57:54,988 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:54,988 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:57,359 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:57,360 - sign-language-server - INFO - Received text from user user1: no
+2025-03-20 21:57:57,362 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:57,362 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:57:59,510 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:57:59,513 - sign-language-server - INFO - Received text from user user1: stop
+2025-03-20 21:57:59,514 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:57:59,514 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:58:01,587 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:58:01,588 - sign-language-server - INFO - Received text from user user1: stop
+2025-03-20 21:58:01,589 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:58:01,590 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 21:58:03,665 - sign-language-server - INFO - User user1 connected
+2025-03-20 21:58:03,667 - sign-language-server - INFO - Received text from user user1: yes
+2025-03-20 21:58:03,669 - sign-language-server - ERROR - WebSocket error for user user1: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 21:58:03,669 - sign-language-server - INFO - User user1 disconnected and cleaned up
+2025-03-20 22:16:14,457 - sign-language-server - INFO - Model loaded successfully from ./model.p
+2025-03-20 22:16:14,478 - sign-language-server - INFO - Starting Sign Language Translation Server on http://0.0.0.0:5000
+2025-03-20 22:17:10,427 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb connected
+2025-03-20 22:17:10,443 - sign-language-server - INFO - Received text from user user_2uaGygGzODCo69PE7X6UUobzMZb: meeting_started
+2025-03-20 22:17:10,443 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb joined a meeting
+2025-03-20 22:25:13,145 - sign-language-server - INFO - Received text from user user_2uaGygGzODCo69PE7X6UUobzMZb: meeting_ended
+2025-03-20 22:25:13,150 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb left a meeting
+2025-03-20 22:25:13,154 - sign-language-server - INFO - Received text from user user_2uaGygGzODCo69PE7X6UUobzMZb: meeting_ended
+2025-03-20 22:25:13,155 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb left a meeting
+2025-03-20 22:25:13,164 - sign-language-server - ERROR - WebSocket error for user user_2uaGygGzODCo69PE7X6UUobzMZb: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 22:25:13,168 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb disconnected and cleaned up
+2025-03-20 22:31:42,644 - sign-language-server - INFO - Model loaded successfully from ./model.p
+2025-03-20 22:31:42,670 - sign-language-server - INFO - Starting Sign Language Translation Server on http://0.0.0.0:5000
+2025-03-20 22:33:43,263 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb connected
+2025-03-20 22:33:43,288 - sign-language-server - INFO - Received text from user user_2uaGygGzODCo69PE7X6UUobzMZb: meeting_started
+2025-03-20 22:33:43,288 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb joined a meeting
+2025-03-20 22:40:04,295 - sign-language-server - ERROR - WebSocket error for user user_2uaGygGzODCo69PE7X6UUobzMZb: Cannot call "receive" once a disconnect message has been received.
+2025-03-20 22:40:04,296 - sign-language-server - INFO - User user_2uaGygGzODCo69PE7X6UUobzMZb disconnected and cleaned up
