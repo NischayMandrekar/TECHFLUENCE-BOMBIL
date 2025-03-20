@@ -1,5 +1,5 @@
 item { 
-	name:'Hello'
+	name:'hello'
 	id:1
 }
 item { 
@@ -15,6 +15,46 @@ item {
 	id:4
 }
 item { 
-	name:'I love you'
+	name:'iloveyou'
 	id:5
+}
+item { 
+	name:'all done'
+	id:6
+}
+item { 
+	name:'drink'
+	id:7
+}
+item { 
+	name:'eat'
+	id:8
+}
+item { 
+	name:'go'
+	id:9
+}
+item { 
+	name:'help'
+	id:10
+}
+item { 
+	name:'hurt'
+	id:11
+}
+item { 
+	name:'more'
+	id:12
+}
+item { 
+	name:'myturn'
+	id:13
+}
+item { 
+	name:'play'
+	id:14
+}
+item { 
+	name:'stop'
+	id:15
 }

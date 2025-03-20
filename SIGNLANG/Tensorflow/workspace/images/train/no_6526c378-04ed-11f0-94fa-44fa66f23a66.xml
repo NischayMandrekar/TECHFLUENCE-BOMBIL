@@ -1,0 +1,26 @@
+<annotation>
+	<folder>collectedimages</folder>
+	<filename>no_6526c378-04ed-11f0-94fa-44fa66f23a66.jpg</filename>
+	<path>C:\Users\nikhi\OneDrive\Documents\GitHub\TECHFLUENCE-BOMBIL\SIGNLANG\Tensorflow\workspace\images\collectedimages\no_6526c378-04ed-11f0-94fa-44fa66f23a66.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>No</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>106</xmin>
+			<ymin>186</ymin>
+			<xmax>296</xmax>
+			<ymax>418</ymax>
+		</bndbox>
+	</object>
+</annotation>

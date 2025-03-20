@@ -1,0 +1,26 @@
+<annotation>
+	<folder>collectedimages</folder>
+	<filename>play_07dd6f77-056e-11f0-87ef-44fa66f23a66.jpg</filename>
+	<path>C:\Users\nikhi\OneDrive\Documents\GitHub\TECHFLUENCE-BOMBIL\SIGNLANG\Tensorflow\workspace\images\collectedimages\play_07dd6f77-056e-11f0-87ef-44fa66f23a66.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>play</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>60</xmin>
+			<ymin>218</ymin>
+			<xmax>517</xmax>
+			<ymax>391</ymax>
+		</bndbox>
+	</object>
+</annotation>

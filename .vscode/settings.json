@@ -1,3 +1,6 @@
 {
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "python.analysis.extraPaths": [
+    "./SIGNLANG/Tensorflow/models/official/projects/fffner/utils/convert_checkpoint_"
+  ]
 }
