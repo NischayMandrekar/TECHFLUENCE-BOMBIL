@@ -1,13 +1,33 @@
-torch
-torchvision
-transformers
-opencv-python
-fastapi
-uvicorn
-onnxruntime
-numpy
-tqdm
-pandas
-scipy
-matplotlib
-kagglehub
+PyQt5==5.15.4          # GUI Framework
+argparse                # For parsing command-line arguments
+codecs                  # To handle encoding
+platform                # To check the OS platform
+shutil                  # For file operations like copying/removing directories
+webbrowser              # To open web pages
+partial                 # To use functools.partial
+lxml
+# The following are additional libraries that are likely part of the 'libs' folder you mentioned.
+# If these are custom modules, you can ignore these lines:
+# libs.combobox
+# libs.default_label_combobox
+# libs.resources
+# libs.constants
+# libs.utils
+# libs.settings
+# libs.shape
+# libs.stringBundle
+# libs.canvas
+# libs.zoomWidget
+# libs.lightWidget
+# libs.labelDialog
+# libs.colorDialog
+# libs.labelFile
+# libs.toolBar
+# libs.pascal_voc_io
+# libs.yolo_io
+# libs.create_ml_io
+# libs.ustr
+# libs.hashableQListWidgetItem
+
+# External dependencies (if needed):
+# These libraries depend on specific tasks, so include them only if necessary:
