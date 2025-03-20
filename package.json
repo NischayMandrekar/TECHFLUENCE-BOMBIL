@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.12.6",
+    "@clerk/themes": "^2.2.22",
+    "@zegocloud/zego-uikit-prebuilt": "^2.14.1-beta",
+    "framer-motion": "^12.5.0",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
