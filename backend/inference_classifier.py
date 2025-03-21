@@ -19,7 +19,13 @@ mp_drawing_styles = mp.solutions.drawing_styles
 hands = mp_hands.Hands(static_image_mode=False, min_detection_confidence=0.3, min_tracking_confidence=0.3)
 
 # Define labels for predictions
-labels_dict = {0: 'yes', 1: 'noo', 2: 'stop'}
+labels_dict = {
+    2: 'drink', 5: 'i love you', 7: 'me', 8: 'no', 
+    11: 'thank you', 12: 'warning', 13: 'yes', 14: 'you', 
+    15: 'hello', 16: 'goodbye', 17: 'please', 18: 'sorry', 
+    24: 'understand', 25: 'think', 26: 'this', 27: 'who', 
+    28: 'why', 30: 'look'
+}
 
 while True:
     data_aux = []
