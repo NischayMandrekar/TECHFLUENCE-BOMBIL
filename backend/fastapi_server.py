@@ -78,7 +78,14 @@ mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=False, min_detection_confidence=0.3, min_tracking_confidence=0.3, max_num_hands=1)
 
 # Define labels - expand as needed
-labels_dict = {0: 'yes', 1: 'no', 2: 'stop'}
+# Define labels for predictions
+labels_dict = {
+    2: 'drink', 5: 'i love you', 7: 'me', 8: 'no', 
+    11: 'thank you', 12: 'Red light', 13: 'yes', 14: 'hello', 
+    15: 'you', 16: 'eliminated', 17: 'please', 18: 'sorry', 
+    24: 'understand', 25: 'think', 26: 'this', 27: 'who', 
+    28: 'why', 30: 'green light'
+}
 
 # Cache to avoid sending the same caption repeatedly
 caption_cache: Dict[str, str] = {}
