@@ -19,7 +19,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(),  # Terminal output
-        logging.FileHandler("sign_language_server.log"),  # Also log to file for debugging
+        
     ]
 )
 logger = logging.getLogger("sign-language-server")
